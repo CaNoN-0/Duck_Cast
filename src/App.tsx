@@ -14,7 +14,6 @@ import { WalletProvider, useSolanaWallet } from './wallet/WalletContext';
 import { shortenSolanaAddress } from './solana/config';
 import { MOCK_MARKETS } from './data/mockMarkets';
 import { UserProfileData, DEFAULT_PROFILE } from './types/profile';
-import { DatabaseRosterModal } from './components/navigation/DatabaseRosterModal';
 
 function AppContent() {
   const [currentPage, setCurrentPage] = useState<'home' | 'predictions' | 'profile'>('home');
@@ -22,7 +21,6 @@ function AppContent() {
   const [leaderboardModalOpen, setLeaderboardModalOpen] = useState(false);
   const [watchlistModalOpen, setWatchlistModalOpen] = useState(false);
   const [settingsModalOpen, setSettingsModalOpen] = useState(false);
-  const [databaseModalOpen, setDatabaseModalOpen] = useState(false);
   const [imageError, setImageError] = useState(false);
   const [initialMarketId, setInitialMarketId] = useState<string | null>(null);
 
@@ -122,7 +120,6 @@ function AppContent() {
           onOpenLeaderboard={() => setLeaderboardModalOpen(true)}
           onOpenWatchlist={() => setWatchlistModalOpen(true)}
           onOpenSettings={() => setSettingsModalOpen(true)}
-          onOpenDatabase={() => setDatabaseModalOpen(true)}
           connectedWallet={connectedWallet}
           onOpenWalletModal={openWalletModal}
           onDisconnectWallet={disconnectWallet}
@@ -144,17 +141,6 @@ function AppContent() {
         <SettingsModal
           isOpen={settingsModalOpen}
           onClose={() => setSettingsModalOpen(false)}
-        />
-        <DatabaseRosterModal
-          isOpen={databaseModalOpen}
-          onClose={() => setDatabaseModalOpen(false)}
-          onSelectUser={(u) => {
-            handleUpdateProfile({
-              username: u.username,
-              bio: u.bio
-            });
-            setDatabaseModalOpen(false);
-          }}
         />
       </>
     );
@@ -185,7 +171,6 @@ function AppContent() {
           onOpenLeaderboard={() => setLeaderboardModalOpen(true)}
           onOpenWatchlist={() => setWatchlistModalOpen(true)}
           onOpenSettings={() => setSettingsModalOpen(true)}
-          onOpenDatabase={() => setDatabaseModalOpen(true)}
           connectedWallet={connectedWallet}
           onOpenWalletModal={openWalletModal}
           onDisconnectWallet={disconnectWallet}
@@ -207,17 +192,6 @@ function AppContent() {
         <SettingsModal
           isOpen={settingsModalOpen}
           onClose={() => setSettingsModalOpen(false)}
-        />
-        <DatabaseRosterModal
-          isOpen={databaseModalOpen}
-          onClose={() => setDatabaseModalOpen(false)}
-          onSelectUser={(u) => {
-            handleUpdateProfile({
-              username: u.username,
-              bio: u.bio
-            });
-            setDatabaseModalOpen(false);
-          }}
         />
       </>
     );
@@ -393,7 +367,6 @@ function AppContent() {
         onOpenLeaderboard={() => setLeaderboardModalOpen(true)}
         onOpenWatchlist={() => setWatchlistModalOpen(true)}
         onOpenSettings={() => setSettingsModalOpen(true)}
-        onOpenDatabase={() => setDatabaseModalOpen(true)}
         connectedWallet={connectedWallet}
         onOpenWalletModal={openWalletModal}
         onDisconnectWallet={disconnectWallet}
@@ -415,17 +388,6 @@ function AppContent() {
       <SettingsModal
         isOpen={settingsModalOpen}
         onClose={() => setSettingsModalOpen(false)}
-      />
-      <DatabaseRosterModal
-        isOpen={databaseModalOpen}
-        onClose={() => setDatabaseModalOpen(false)}
-        onSelectUser={(u) => {
-          handleUpdateProfile({
-            username: u.username,
-            bio: u.bio
-          });
-          setDatabaseModalOpen(false);
-        }}
       />
     </div>
   );

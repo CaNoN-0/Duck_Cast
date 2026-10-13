@@ -18,8 +18,7 @@ import {
   Flame,
   Sparkles,
   Radio,
-  Shield,
-  Database
+  Shield
 } from 'lucide-react';
 import { HalftoneBackground } from '../marketplace/HalftoneBackground';
 import { UserProfileData, DEFAULT_PROFILE } from '../../types/profile';
@@ -33,7 +32,6 @@ export interface MenuDrawerProps {
   onOpenLeaderboard: () => void;
   onOpenWatchlist: () => void;
   onOpenSettings: () => void;
-  onOpenDatabase?: () => void;
   onOpenAdminDashboard?: () => void;
   connectedWallet: {
     name: string;
@@ -58,7 +56,6 @@ export function MenuDrawer({
   onOpenLeaderboard,
   onOpenWatchlist,
   onOpenSettings,
-  onOpenDatabase,
   onOpenAdminDashboard,
   connectedWallet,
   onOpenWalletModal,
@@ -341,24 +338,6 @@ export function MenuDrawer({
                     <span className="group-hover:translate-x-0.5 transition-transform duration-200">Watchlist</span>
                   </div>
                   <ChevronRight className="w-3.5 h-3.5 text-neutral-400 group-hover:text-black group-hover:translate-x-1 transition-all duration-200" />
-                </button>
-
-                {/* Database (15 Users) Tab */}
-                <button
-                  type="button"
-                  onClick={() => {
-                    onClose();
-                    onOpenDatabase?.();
-                  }}
-                  className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-[13px] text-xs font-bold text-neutral-600 hover:text-[#09090B] hover:bg-neutral-50 transition-all duration-200 cursor-pointer group hover:-translate-y-0.5"
-                >
-                  <div className="flex items-center gap-2.5">
-                    <Database className="w-4 h-4 text-emerald-600 group-hover:scale-110 transition-transform duration-200" />
-                    <span className="group-hover:translate-x-0.5 transition-transform duration-200">Database (15 Users)</span>
-                  </div>
-                  <span className="text-[10px] font-bold text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded-[7px] border border-emerald-200 font-mono-tabular">
-                    Firestore
-                  </span>
                 </button>
 
                 {/* Profile Tab - Squircle & Animated */}

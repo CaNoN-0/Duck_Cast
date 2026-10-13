@@ -1101,7 +1101,7 @@ export const MOCK_MARKETS: PredictionMarket[] = [
     chartHistory: generateChartPoints(77, 2.5),
     resolutionDate: 'End of Month',
     resolutionCriteria: 'Resolves YES if game is officially playable for general purchasers on Steam before Q4 start.',
-    source: 'Steam Store & Valve Database',
+    source: 'Steam Store & Valve Charts',
     liquidity: '$670K',
     commentsCount: 31,
     theses: [
