@@ -91,7 +91,7 @@ export function PredictionsMarketplace({
   // State
   const [markets, setMarkets] = useState<PredictionMarket[]>(MOCK_MARKETS);
   const [selectedCategory, setSelectedCategory] = useState<MarketCategory>('All');
-  const [activeCenterNav, setActiveCenterNav] = useState<'Markets' | 'Battles' | 'Activity' | 'Live' | 'Trending' | 'New' | 'Ending Soon'>('Markets');
+  const [activeCenterNav, setActiveCenterNav] = useState<'Markets' | 'Battles' | 'Live' | 'Trending' | 'New' | 'Ending Soon'>('Markets');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<MarketSortOption>('Trending');
   const [quickFilter, setQuickFilter] = useState<MarketQuickFilter>('All Markets');
@@ -155,12 +155,10 @@ export function PredictionsMarketplace({
   };
 
   // Center Nav Selection
-  const handleSelectCenterNav = (item: 'Markets' | 'Battles' | 'Activity' | 'Live' | 'Trending' | 'New' | 'Ending Soon') => {
+  const handleSelectCenterNav = (item: 'Markets' | 'Battles' | 'Live' | 'Trending' | 'New' | 'Ending Soon') => {
     setActiveCenterNav(item as any);
     if (item === 'Markets') {
       setQuickFilter('All Markets');
-    } else if (item === 'Activity') {
-      setQuickFilter('Activity');
     } else if (item === 'Battles') {
       showNotification('Prediction Battles: Community-backed head-to-head claims');
     } else if (item === 'Live') {
@@ -258,10 +256,15 @@ export function PredictionsMarketplace({
     bookmarkedIds
   ]);
 
-  // Handle Card Click
+  // Handle Card Click - Always start from the top
   const handleOpenMarketDetail = (market: PredictionMarket, side: 'YES' | 'NO' = 'YES') => {
     setSelectedMarket(market);
     setInitialDetailSide(side);
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }
   };
 
   // Handle Create Market
@@ -318,7 +321,14 @@ export function PredictionsMarketplace({
         market={selectedMarket}
         allMarkets={markets}
         onBackToMarketplace={() => setSelectedMarket(null)}
-        onSelectRelatedMarket={(rm) => setSelectedMarket(rm)}
+        onSelectRelatedMarket={(rm) => {
+          setSelectedMarket(rm);
+          if (typeof window !== 'undefined') {
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+          }
+        }}
         connectedWallet={connectedWallet}
         onOpenWalletModal={onOpenWalletModal}
         initialSide={initialDetailSide}
@@ -430,7 +440,7 @@ export function PredictionsMarketplace({
 
           {/* Center Navigation: Squircle Border Radius */}
           <nav className="hidden lg:flex items-center gap-1 bg-neutral-100/90 p-1 rounded-[16px] border border-neutral-200/60">
-            {(['Markets', 'Battles', 'Activity', 'Live', 'Trending', 'New', 'Ending Soon'] as const).map((tab) => {
+            {(['Markets', 'Battles', 'Live', 'Trending', 'New', 'Ending Soon'] as const).map((tab) => {
               const isActive = activeCenterNav === tab;
               return (
                 <button
@@ -444,7 +454,6 @@ export function PredictionsMarketplace({
                   }`}
                 >
                   {tab === 'Battles' && <Swords className="w-3 h-3 text-black" />}
-                  {tab === 'Activity' && <Activity className="w-3 h-3 text-emerald-600" />}
                   {tab === 'Live' && (
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                   )}

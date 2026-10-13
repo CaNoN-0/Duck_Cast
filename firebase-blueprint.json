@@ -1,0 +1,100 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile for predictors on DuckCast",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique user ID or wallet address" },
+        "username": { "type": "string", "description": "Display handle" },
+        "bio": { "type": "string", "description": "User biography" },
+        "walletAddress": { "type": "string", "description": "Connected Solana wallet address" },
+        "avatar": { "type": "string", "description": "Avatar symbol or image URL" },
+        "balance": { "type": "number", "description": "Simulated USD wallet balance" },
+        "accuracy": { "type": "number", "description": "Historical prediction accuracy percentage" },
+        "totalPredictions": { "type": "number", "description": "Total predictions made" },
+        "totalVolume": { "type": "number", "description": "Total volume traded in USD" },
+        "rank": { "type": "number", "description": "Leaderboard rank" },
+        "createdAt": { "type": "string", "description": "ISO timestamp of account creation" },
+        "updatedAt": { "type": "string", "description": "ISO timestamp of last update" }
+      },
+      "required": ["id", "username", "walletAddress"]
+    },
+    "Market": {
+      "title": "Market",
+      "description": "Prediction market document",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Market identifier" },
+        "question": { "type": "string", "description": "Prediction market title or question" },
+        "category": { "type": "string", "description": "Market category" },
+        "topic": { "type": "string", "description": "Specific subtopic or asset" },
+        "yesProbability": { "type": "number", "description": "Current YES probability percentage" },
+        "noProbability": { "type": "number", "description": "Current NO probability percentage" },
+        "volume": { "type": "string", "description": "Formatted volume string" },
+        "volumeNumeric": { "type": "number", "description": "Numeric volume in USD" },
+        "traders": { "type": "number", "description": "Count of participating forecasters" },
+        "timeRemaining": { "type": "string", "description": "Remaining duration until resolution" },
+        "resolutionDate": { "type": "string", "description": "Target resolution date string" },
+        "resolutionCriteria": { "type": "string", "description": "Detailed rules defining outcome resolution" },
+        "source": { "type": "string", "description": "Official verification source" },
+        "liquidity": { "type": "string", "description": "Available liquidity pool" },
+        "creatorAddress": { "type": "string", "description": "Wallet address of creator" },
+        "createdAt": { "type": "string", "description": "ISO timestamp of creation" }
+      },
+      "required": ["id", "question", "category", "yesProbability", "noProbability"]
+    },
+    "Trade": {
+      "title": "Trade",
+      "description": "Individual prediction order executed by a user",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Trade ID" },
+        "marketId": { "type": "string", "description": "Target market ID" },
+        "userId": { "type": "string", "description": "Forecaster user ID" },
+        "username": { "type": "string", "description": "Forecaster username" },
+        "side": { "type": "string", "description": "YES or NO position", "enum": ["YES", "NO"] },
+        "amount": { "type": "number", "description": "Amount staked in USD" },
+        "shares": { "type": "number", "description": "Contract shares acquired" },
+        "priceCents": { "type": "number", "description": "Effective cost per share" },
+        "timestamp": { "type": "string", "description": "ISO timestamp of execution" }
+      },
+      "required": ["id", "marketId", "userId", "side", "amount"]
+    },
+    "Thesis": {
+      "title": "Thesis",
+      "description": "User prediction claim/thesis reasoning",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Thesis ID" },
+        "marketId": { "type": "string", "description": "Target market ID" },
+        "userId": { "type": "string", "description": "Author user ID" },
+        "author": { "type": "string", "description": "Author display name" },
+        "handle": { "type": "string", "description": "Author handle" },
+        "side": { "type": "string", "description": "YES or NO stance", "enum": ["YES", "NO"] },
+        "text": { "type": "string", "description": "Explanation text" },
+        "staked": { "type": "string", "description": "Conviction amount staked" },
+        "timestamp": { "type": "string", "description": "ISO timestamp" }
+      },
+      "required": ["id", "marketId", "userId", "side", "text"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profile documents indexed by user ID"
+    },
+    "/markets/{marketId}": {
+      "schema": "Market",
+      "description": "Prediction market documents"
+    },
+    "/trades/{tradeId}": {
+      "schema": "Trade",
+      "description": "Executed prediction trades"
+    },
+    "/theses/{thesisId}": {
+      "schema": "Thesis",
+      "description": "User prediction rationale theses"
+    }
+  }
+}
