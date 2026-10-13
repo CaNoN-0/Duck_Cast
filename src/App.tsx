@@ -44,15 +44,6 @@ function AppContent() {
     } catch {}
   }, []);
 
-  // Always reset scroll to top when switching pages
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
-    }
-  }, [currentPage]);
-
   // Synchronized Profile State per connected wallet address
   const [userProfile, setUserProfile] = useState<UserProfileData>(() => {
     try {
@@ -331,7 +322,7 @@ function AppContent() {
           <button
             type="button"
             onClick={openWalletModal}
-            className="group relative inline-flex items-center justify-center gap-2.5 px-6 py-3 h-[46px] bg-[#09090B] text-white text-[14px] font-semibold tracking-[-0.01em] rounded-lg border border-[#09090B] hover:bg-[#18181B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 transition-all duration-150 cursor-pointer whitespace-nowrap shrink-0 w-full sm:w-auto shadow-xs"
+            className="group relative inline-flex items-center justify-center gap-2.5 px-6 py-3 h-[46px] rgb-glow bg-[#09090B] text-white text-[14px] font-semibold tracking-[-0.01em] rounded-lg border border-[#09090B] hover:bg-[#18181B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#10B981] focus-visible:ring-offset-2 transition-all duration-150 cursor-pointer whitespace-nowrap shrink-0 w-full sm:w-auto shadow-xs"
           >
             <span>
               {connectedWallet

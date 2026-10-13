@@ -467,7 +467,7 @@ export const PantaRoomsView: React.FC<PantaRoomsViewProps> = ({
         {/* Rooms Grid */}
         {isLoading ? (
           <div className="py-16 text-center text-neutral-400 text-xs">
-            Loading Panta Rooms...
+            Loading Panta Rooms database...
           </div>
         ) : filteredRooms.length === 0 ? (
           <div className="py-16 text-center border border-dashed border-neutral-300 rounded-2xl bg-white p-8">

@@ -297,17 +297,6 @@ Critique this user thesis as the DuckCast Thesis Assistant.
     res.json(db.getHealth());
   });
 
-  // GET /api/panta/status - Panta Protocol & API Key Integration Status
-  app.get('/api/panta/status', (req: Request, res: Response) => {
-    const key = process.env.PANTA_API_KEY || 'pk_live_mjahWGwUJPGRjyR2FHk4bUinUPijSWHPrqeMKWFukGs';
-    res.json({
-      status: 'active',
-      protocol: 'Panta',
-      keyConfigured: Boolean(key),
-      keyPrefix: key.slice(0, 12) + '...'
-    });
-  });
-
   // GET /api/users - List all 10 test users + registered users
   app.get('/api/users', (req: Request, res: Response) => {
     const users = db.getUsers().map((u) => {

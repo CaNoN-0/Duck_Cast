@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   ArrowLeft,
   Clock,
@@ -67,15 +67,6 @@ export function MarketDetailPage({
   const [amountStr, setAmountStr] = useState<string>('50');
   const [tradeSuccess, setTradeSuccess] = useState<string | null>(null);
   const [tradeError, setTradeError] = useState<string | null>(null);
-
-  // Always start from top when opening a prediction market
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
-    }
-  }, [market.id]);
 
   // AI Analyst state
   const [isAiPanelOpen, setIsAiPanelOpen] = useState(false);
@@ -757,14 +748,7 @@ export function MarketDetailPage({
                   {relatedMarkets.map((rm) => (
                     <div
                       key={rm.id}
-                      onClick={() => {
-                        onSelectRelatedMarket(rm);
-                        if (typeof window !== 'undefined') {
-                          window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-                          document.documentElement.scrollTop = 0;
-                          document.body.scrollTop = 0;
-                        }
-                      }}
+                      onClick={() => onSelectRelatedMarket(rm)}
                       className="relative overflow-hidden p-3 bg-neutral-50/70 hover:bg-neutral-100/80 border border-neutral-200/70 rounded-lg cursor-pointer transition-colors flex flex-col justify-between group/rm"
                     >
                       <HalftoneBackground opacity={0.06} className="group-hover/rm:opacity-10 transition-opacity" />

@@ -13,7 +13,6 @@ import { SOLANA_USDC_MINT } from '../solana/config';
 export const PANTA_CONFIG = {
   protocolName: 'Panta',
   network: 'Solana',
-  apiKey: (typeof import.meta !== 'undefined' && import.meta.env?.VITE_PANTA_API_KEY) || 'pk_live_mjahWGwUJPGRjyR2FHk4bUinUPijSWHPrqeMKWFukGs',
   usdcMint: SOLANA_USDC_MINT,
   usdcDecimals: 6,
   primaryMarketFeePercent: 2.0, // Panta standard primary market AMM fee (2%)

@@ -20,7 +20,7 @@ import {
   X,
   ExternalLink,
   ChevronRight,
-  HardDrive,
+  Database,
   ArrowUpRight,
   Eye,
   MessageSquare
@@ -167,7 +167,7 @@ export const AdminActivityDashboard: React.FC<AdminActivityDashboardProps> = ({
                 </span>
               </div>
               <p className="text-[11px] text-neutral-400">
-                Panta Rooms audit trail, online presence, and activity tracking.
+                Panta Rooms audit trail, online presence, and database activity tracking.
               </p>
             </div>
           </div>
@@ -271,11 +271,11 @@ export const AdminActivityDashboard: React.FC<AdminActivityDashboardProps> = ({
 
               <div className="bg-white p-2.5 rounded-xl border border-neutral-200 shadow-2xs">
                 <span className="text-[10px] font-bold text-neutral-500 uppercase tracking-wider flex items-center gap-1">
-                  <HardDrive className="w-3 h-3 text-emerald-600" />
-                  <span>Storage Ledger</span>
+                  <Database className="w-3 h-3 text-emerald-600" />
+                  <span>Persistence File</span>
                 </span>
                 <div className="text-[11px] font-mono-tabular font-bold text-neutral-800 mt-1 truncate">
-                  data/panta_ledger.json
+                  data/panta_database.json
                 </div>
                 <div className="text-[10px] text-emerald-600 font-semibold">
                   Saved across deployments
@@ -633,7 +633,7 @@ export const AdminActivityDashboard: React.FC<AdminActivityDashboardProps> = ({
 
                         <div className="mt-4 pt-3 border-t border-neutral-100 flex items-center justify-between text-xs">
                           <span className="text-[11px] text-neutral-500">
-                            {room.messages.length} messages logged
+                            {room.messages.length} messages in database
                           </span>
 
                           {onNavigateToRoom && (
