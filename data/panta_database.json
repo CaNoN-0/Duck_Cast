@@ -1,0 +1,778 @@
+{
+  "version": 1,
+  "lastPersisted": "2026-10-12T22:32:44.602Z",
+  "users": [
+    {
+      "id": "user-1",
+      "username": "Elena Rostova",
+      "handle": "@elena_crypto",
+      "email": "elena@pantarooms.io",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80",
+      "role": "admin",
+      "bio": "Lead Macro & Crypto Quant. Founder of Panta Alpha Room.",
+      "isOnline": true,
+      "lastActiveTime": "2026-10-12T22:22:33.157Z",
+      "roomsCreated": [
+        "room-1",
+        "room-4"
+      ],
+      "roomsJoined": [
+        "room-1",
+        "room-2",
+        "room-4"
+      ],
+      "walletAddress": "7Yw...9bA1",
+      "reputationScore": 98,
+      "totalPredictions": 142,
+      "winRatePercent": 78,
+      "createdAt": "2026-01-10T10:00:00.000Z"
+    },
+    {
+      "id": "user-2",
+      "username": "SatoshiDuck",
+      "handle": "@satoshiduck",
+      "email": "satoshi@pantarooms.io",
+      "avatar": "/src/assets/images/duckcast_mascot_illustration_1790877735628.jpg",
+      "role": "user",
+      "bio": "On-chain derivatives analyst. Always long volatility.",
+      "isOnline": true,
+      "lastActiveTime": "2026-10-12T22:32:44.598Z",
+      "roomsCreated": [
+        "room-2"
+      ],
+      "roomsJoined": [
+        "room-1",
+        "room-2",
+        "room-3"
+      ],
+      "walletAddress": "3Xp...8mC2",
+      "reputationScore": 94,
+      "totalPredictions": 210,
+      "winRatePercent": 74,
+      "createdAt": "2026-01-12T11:00:00.000Z"
+    },
+    {
+      "id": "user-3",
+      "username": "Marcus Vance",
+      "handle": "@marcus_vance",
+      "email": "marcus@pantarooms.io",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80",
+      "role": "user",
+      "bio": "Sports modeling & tactical analysis. Expected goals (xG) purist.",
+      "isOnline": true,
+      "lastActiveTime": "2026-10-12T22:32:44.599Z",
+      "roomsCreated": [
+        "room-3"
+      ],
+      "roomsJoined": [
+        "room-3",
+        "room-1"
+      ],
+      "walletAddress": "9Lm...4jP9",
+      "reputationScore": 89,
+      "totalPredictions": 95,
+      "winRatePercent": 68,
+      "createdAt": "2026-01-15T09:30:00.000Z"
+    },
+    {
+      "id": "user-4",
+      "username": "Kaito Tanaka",
+      "handle": "@kaito_tanaka",
+      "email": "kaito@pantarooms.io",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
+      "role": "user",
+      "bio": "AI researcher tracking frontier LLM benchmarks and release timelines.",
+      "isOnline": true,
+      "lastActiveTime": "2026-10-12T22:32:44.600Z",
+      "roomsCreated": [
+        "room-1791843913263",
+        "room-1791844364600"
+      ],
+      "roomsJoined": [
+        "room-1",
+        "room-4",
+        "room-1791843913263",
+        "room-1791844364600"
+      ],
+      "walletAddress": "2Kp...7vT8",
+      "reputationScore": 91,
+      "totalPredictions": 88,
+      "winRatePercent": 71,
+      "createdAt": "2026-01-20T14:15:00.000Z"
+    },
+    {
+      "id": "user-5",
+      "username": "Sophia Chen",
+      "handle": "@sophia_chen",
+      "email": "sophia@pantarooms.io",
+      "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200&q=80",
+      "role": "user",
+      "bio": "Biopharma analyst tracking FDA PDUFA decision dates & Phase 3 trial readouts.",
+      "isOnline": false,
+      "lastActiveTime": "2026-10-12T22:32:44.601Z",
+      "roomsCreated": [],
+      "roomsJoined": [
+        "room-1",
+        "room-2"
+      ],
+      "walletAddress": "5Qw...1zN3",
+      "reputationScore": 87,
+      "totalPredictions": 64,
+      "winRatePercent": 65,
+      "createdAt": "2026-01-22T08:00:00.000Z"
+    },
+    {
+      "id": "user-6",
+      "username": "Alex Rivera",
+      "handle": "@alex_rivera",
+      "email": "alex@pantarooms.io",
+      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
+      "role": "user",
+      "bio": "Tech equity strategist specializing in semiconductor capex cycles.",
+      "isOnline": true,
+      "lastActiveTime": "2026-10-12T22:32:44.602Z",
+      "roomsCreated": [],
+      "roomsJoined": [
+        "room-1",
+        "room-4",
+        "room-1791843913263",
+        "room-1791844364600"
+      ],
+      "walletAddress": "4Ty...6uM5",
+      "reputationScore": 92,
+      "totalPredictions": 119,
+      "winRatePercent": 73,
+      "createdAt": "2026-01-25T16:20:00.000Z"
+    },
+    {
+      "id": "user-7",
+      "username": "Dara O'Connor",
+      "handle": "@dara_dublin",
+      "email": "dara@pantarooms.io",
+      "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&h=200&q=80",
+      "role": "user",
+      "bio": "Geopolitical risk & European energy flows specialist.",
+      "isOnline": false,
+      "lastActiveTime": "2026-10-12T16:24:33.158Z",
+      "roomsCreated": [],
+      "roomsJoined": [
+        "room-2"
+      ],
+      "walletAddress": "8Op...3bV7",
+      "reputationScore": 86,
+      "totalPredictions": 78,
+      "winRatePercent": 63,
+      "createdAt": "2026-02-01T12:00:00.000Z"
+    },
+    {
+      "id": "user-8",
+      "username": "TechBae",
+      "handle": "@techbae_sol",
+      "email": "techbae@pantarooms.io",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80",
+      "role": "user",
+      "bio": "Solana DeFi protocols, DEX volume aggregator tracking.",
+      "isOnline": true,
+      "lastActiveTime": "2026-10-12T22:16:33.158Z",
+      "roomsCreated": [],
+      "roomsJoined": [
+        "room-1",
+        "room-2"
+      ],
+      "walletAddress": "1Zx...9yH4",
+      "reputationScore": 90,
+      "totalPredictions": 104,
+      "winRatePercent": 69,
+      "createdAt": "2026-02-03T14:45:00.000Z"
+    },
+    {
+      "id": "user-9",
+      "username": "MacroQuack",
+      "handle": "@macroquack",
+      "email": "macroquack@pantarooms.io",
+      "avatar": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=200&h=200&q=80",
+      "role": "user",
+      "bio": "Federal Reserve rate curves, CPI prints, and treasury yield spreads.",
+      "isOnline": false,
+      "lastActiveTime": "2026-10-12T19:24:33.158Z",
+      "roomsCreated": [],
+      "roomsJoined": [
+        "room-1",
+        "room-2"
+      ],
+      "walletAddress": "6Vb...2cQ1",
+      "reputationScore": 93,
+      "totalPredictions": 167,
+      "winRatePercent": 72,
+      "createdAt": "2026-02-05T09:10:00.000Z"
+    },
+    {
+      "id": "user-10",
+      "username": "Liam Sterling",
+      "handle": "@liam_sterling",
+      "email": "liam@pantarooms.io",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200&q=80",
+      "role": "user",
+      "bio": "European football & Champions League analytical modeling.",
+      "isOnline": true,
+      "lastActiveTime": "2026-10-12T22:09:33.158Z",
+      "roomsCreated": [],
+      "roomsJoined": [
+        "room-3"
+      ],
+      "walletAddress": "9Qa...5wE8",
+      "reputationScore": 88,
+      "totalPredictions": 82,
+      "winRatePercent": 67,
+      "createdAt": "2026-02-10T10:30:00.000Z"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "room-1791844364600",
+      "name": "Test Alpha Room 1791844364599",
+      "topic": "Testing model alignment and calibration",
+      "category": "AI & Tech",
+      "description": "A test verification room created during test execution",
+      "createdBy": "user-4",
+      "creatorName": "Kaito Tanaka",
+      "creatorAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
+      "activeThesis": "Alex Rivera: Comprehensive probability thesis analysis for verification test.",
+      "participants": [
+        "user-4",
+        "user-6"
+      ],
+      "participantCount": 1,
+      "maxParticipants": 80,
+      "status": "active",
+      "isLive": true,
+      "tags": [
+        "Testing",
+        "Verification"
+      ],
+      "messages": [
+        {
+          "id": "msg-1791844364600",
+          "roomId": "room-1791844364600",
+          "userId": "user-4",
+          "username": "Kaito Tanaka",
+          "userAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
+          "userHandle": "@kaito_tanaka",
+          "content": "Kaito: Verification runs confirm deterministic behavior.",
+          "type": "thesis",
+          "timestamp": "2026-10-12T22:32:44.600Z"
+        },
+        {
+          "id": "msg-1791844364602-h4sf",
+          "roomId": "room-1791844364600",
+          "userId": "user-6",
+          "username": "Alex Rivera",
+          "userAvatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
+          "userHandle": "@alex_rivera",
+          "content": "Comprehensive probability thesis analysis for verification test.",
+          "type": "thesis",
+          "stance": "YES",
+          "stakedAmount": 500,
+          "timestamp": "2026-10-12T22:32:44.602Z"
+        }
+      ],
+      "createdAt": "2026-10-12T22:32:44.600Z",
+      "updatedAt": "2026-10-12T22:32:44.602Z"
+    },
+    {
+      "id": "room-1791843913263",
+      "name": "Test Alpha Room 1791843913262",
+      "topic": "Testing model alignment and calibration",
+      "category": "AI & Tech",
+      "description": "A test verification room created during test execution",
+      "createdBy": "user-4",
+      "creatorName": "Kaito Tanaka",
+      "creatorAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
+      "activeThesis": "Alex Rivera: Comprehensive probability thesis analysis for verification test.",
+      "participants": [
+        "user-4",
+        "user-6"
+      ],
+      "participantCount": 1,
+      "maxParticipants": 80,
+      "status": "active",
+      "isLive": true,
+      "tags": [
+        "Testing",
+        "Verification"
+      ],
+      "messages": [
+        {
+          "id": "msg-1791843913263",
+          "roomId": "room-1791843913263",
+          "userId": "user-4",
+          "username": "Kaito Tanaka",
+          "userAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
+          "userHandle": "@kaito_tanaka",
+          "content": "Kaito: Verification runs confirm deterministic behavior.",
+          "type": "thesis",
+          "timestamp": "2026-10-12T22:25:13.263Z"
+        },
+        {
+          "id": "msg-1791843913266-6zxx",
+          "roomId": "room-1791843913263",
+          "userId": "user-6",
+          "username": "Alex Rivera",
+          "userAvatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
+          "userHandle": "@alex_rivera",
+          "content": "Comprehensive probability thesis analysis for verification test.",
+          "type": "thesis",
+          "stance": "YES",
+          "stakedAmount": 500,
+          "timestamp": "2026-10-12T22:25:13.266Z"
+        }
+      ],
+      "createdAt": "2026-10-12T22:25:13.263Z",
+      "updatedAt": "2026-10-12T22:25:13.266Z"
+    },
+    {
+      "id": "room-1",
+      "name": "Bitcoin $120K Strategy Room",
+      "topic": "Will BTC move above $120K before Friday options expiry?",
+      "category": "Crypto",
+      "description": "High-conviction debate room on Bitcoin order-book depth, spot ETF inflows, and Friday gamma pinning.",
+      "marketId": "crypto-btc-120k",
+      "createdBy": "user-1",
+      "creatorName": "Elena Rostova",
+      "creatorAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80",
+      "activeThesis": "Elena: Institutional OTC desks have zero liquid supply above $115K.",
+      "participants": [
+        "user-1",
+        "user-2",
+        "user-4",
+        "user-5",
+        "user-6",
+        "user-8",
+        "user-9"
+      ],
+      "participantCount": 42,
+      "maxParticipants": 100,
+      "status": "active",
+      "isLive": true,
+      "tags": [
+        "Bitcoin",
+        "Crypto",
+        "Derivatives",
+        "Options"
+      ],
+      "createdAt": "2026-02-15T08:00:00.000Z",
+      "updatedAt": "2026-10-12T22:24:33.158Z",
+      "messages": [
+        {
+          "id": "msg-1",
+          "roomId": "room-1",
+          "userId": "user-1",
+          "username": "Elena Rostova",
+          "userAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80",
+          "userHandle": "@elena_crypto",
+          "content": "Institutional OTC order books show massive bids stacked around $117.8K. Breakout probability is heavily skewed YES.",
+          "type": "thesis",
+          "stance": "YES",
+          "stakedAmount": 2500,
+          "timestamp": "2026-10-12T21:44:33.158Z"
+        },
+        {
+          "id": "msg-2",
+          "roomId": "room-1",
+          "userId": "user-2",
+          "username": "SatoshiDuck",
+          "userAvatar": "/src/assets/images/duckcast_mascot_illustration_1790877735628.jpg",
+          "userHandle": "@satoshiduck",
+          "content": "Agreed on spot depth, but watch Friday 08:00 UTC max pain at $119,500. Whales might suppress till expiry settlement.",
+          "type": "thesis",
+          "stance": "NO",
+          "stakedAmount": 1800,
+          "timestamp": "2026-10-12T21:59:33.158Z"
+        },
+        {
+          "id": "msg-3",
+          "roomId": "room-1",
+          "userId": "user-6",
+          "username": "Alex Rivera",
+          "userAvatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
+          "userHandle": "@alex_rivera",
+          "content": "Nasdaq correlation just ticked above 0.82 today. If tech rallies into the close, BTC will effortlessly break $120k.",
+          "type": "chat",
+          "stance": "YES",
+          "timestamp": "2026-10-12T22:19:33.158Z"
+        }
+      ]
+    },
+    {
+      "id": "room-2",
+      "name": "Fed Rates & CPI Print War Room",
+      "topic": "Will the Fed cut rates by 25bps or hold steady at next FOMC?",
+      "category": "Macro",
+      "description": "Real-time discussion on macroeconomic indicators, core inflation reads, and treasury yield curve inversions.",
+      "marketId": "business-fed-rate-cut",
+      "createdBy": "user-2",
+      "creatorName": "SatoshiDuck",
+      "creatorAvatar": "/src/assets/images/duckcast_mascot_illustration_1790877735628.jpg",
+      "activeThesis": "MacroQuack: Labor market softening increases 25bps cut odds to 68%.",
+      "participants": [
+        "user-1",
+        "user-2",
+        "user-5",
+        "user-7",
+        "user-8",
+        "user-9"
+      ],
+      "participantCount": 35,
+      "maxParticipants": 75,
+      "status": "active",
+      "isLive": true,
+      "tags": [
+        "FOMC",
+        "Rates",
+        "Macro",
+        "Inflation"
+      ],
+      "createdAt": "2026-02-16T10:00:00.000Z",
+      "updatedAt": "2026-10-12T22:24:33.158Z",
+      "messages": [
+        {
+          "id": "msg-201",
+          "roomId": "room-2",
+          "userId": "user-9",
+          "username": "MacroQuack",
+          "userAvatar": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=200&h=200&q=80",
+          "userHandle": "@macroquack",
+          "content": "Non-farm payroll revisions are consistently negative. Chairman Powell signaled flexibility in the Jackson Hole minutes.",
+          "type": "thesis",
+          "stance": "YES",
+          "stakedAmount": 3200,
+          "timestamp": "2026-10-12T20:54:33.158Z"
+        }
+      ]
+    },
+    {
+      "id": "room-3",
+      "name": "Champions League Half-time Analysis",
+      "topic": "Tactical xG model evaluation and live in-play predictions.",
+      "category": "Sports",
+      "description": "Forecasters analyzing pressing traps, defensive blocks, and referee tendency metrics.",
+      "marketId": "sports-team-a-halftime",
+      "createdBy": "user-3",
+      "creatorName": "Marcus Vance",
+      "creatorAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80",
+      "activeThesis": "Marcus: Defensive sub incoming, second-half goal probability drops below 35%.",
+      "participants": [
+        "user-2",
+        "user-3",
+        "user-10"
+      ],
+      "participantCount": 28,
+      "maxParticipants": 50,
+      "status": "active",
+      "isLive": true,
+      "tags": [
+        "Champions League",
+        "Football",
+        "In-play",
+        "Tactics"
+      ],
+      "createdAt": "2026-02-17T12:00:00.000Z",
+      "updatedAt": "2026-10-12T22:24:33.158Z",
+      "messages": [
+        {
+          "id": "msg-301",
+          "roomId": "room-3",
+          "userId": "user-3",
+          "username": "Marcus Vance",
+          "userAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80",
+          "userHandle": "@marcus_vance",
+          "content": "Away team is playing a compact 5-4-1 low block. Zero shots on target conceded in 45 minutes.",
+          "type": "thesis",
+          "stance": "NO",
+          "timestamp": "2026-10-12T21:54:33.158Z"
+        }
+      ]
+    },
+    {
+      "id": "room-4",
+      "name": "Frontier AI Model Benchmarks & Q4 Releases",
+      "topic": "Will a frontier reasoning model surpass 90% on SWE-bench Verified this quarter?",
+      "category": "AI & Tech",
+      "description": "Benchmarking labs, test-time compute scaling laws, and release window forecasting.",
+      "marketId": "tech-ai-benchmark-q4",
+      "createdBy": "user-1",
+      "creatorName": "Elena Rostova",
+      "creatorAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80",
+      "activeThesis": "Kaito: Test-time compute scaling trajectory favors YES resolution by late November.",
+      "participants": [
+        "user-1",
+        "user-4",
+        "user-6"
+      ],
+      "participantCount": 19,
+      "maxParticipants": 60,
+      "status": "active",
+      "isLive": true,
+      "tags": [
+        "AI",
+        "Reasoning",
+        "SWE-bench",
+        "Tech"
+      ],
+      "createdAt": "2026-02-18T14:00:00.000Z",
+      "updatedAt": "2026-10-12T22:24:33.158Z",
+      "messages": [
+        {
+          "id": "msg-401",
+          "roomId": "room-4",
+          "userId": "user-4",
+          "username": "Kaito Tanaka",
+          "userAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
+          "userHandle": "@kaito_tanaka",
+          "content": "MCTS rollout verification on repository-level patches is hitting 87% in pre-prints. The jump over 90% is statistically assured.",
+          "type": "thesis",
+          "stance": "YES",
+          "stakedAmount": 1400,
+          "timestamp": "2026-10-12T22:09:33.158Z"
+        }
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "userId": "user-6",
+      "username": "Alex Rivera",
+      "userHandle": "@alex_rivera",
+      "userAvatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
+      "activityType": "thesis_shared",
+      "details": "Shared thesis (YES) in \"Test Alpha Room 1791844364599\": \"Comprehensive probability thesis analysis for verification t...\"",
+      "roomId": "room-1791844364600",
+      "roomName": "Test Alpha Room 1791844364599",
+      "metadata": {
+        "stance": "YES",
+        "stakedAmount": 500,
+        "messageId": "msg-1791844364602-h4sf"
+      },
+      "id": "act-1791844364602-g64lg",
+      "timestamp": "2026-10-12T22:32:44.602Z"
+    },
+    {
+      "userId": "user-5",
+      "username": "Sophia Chen",
+      "userHandle": "@sophia_chen",
+      "userAvatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200&q=80",
+      "activityType": "room_left",
+      "details": "Sophia Chen left \"Test Alpha Room 1791844364599\"",
+      "roomId": "room-1791844364600",
+      "roomName": "Test Alpha Room 1791844364599",
+      "id": "act-1791844364601-saoz2",
+      "timestamp": "2026-10-12T22:32:44.601Z"
+    },
+    {
+      "userId": "user-5",
+      "username": "Sophia Chen",
+      "userHandle": "@sophia_chen",
+      "userAvatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200&q=80",
+      "activityType": "room_joined",
+      "details": "Sophia Chen joined \"Test Alpha Room 1791844364599\"",
+      "roomId": "room-1791844364600",
+      "roomName": "Test Alpha Room 1791844364599",
+      "id": "act-1791844364600-tk444",
+      "timestamp": "2026-10-12T22:32:44.600Z"
+    },
+    {
+      "userId": "user-4",
+      "username": "Kaito Tanaka",
+      "userHandle": "@kaito_tanaka",
+      "userAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
+      "activityType": "room_created",
+      "details": "Created new prediction room \"Test Alpha Room 1791844364599\"",
+      "roomId": "room-1791844364600",
+      "roomName": "Test Alpha Room 1791844364599",
+      "metadata": {
+        "category": "AI & Tech"
+      },
+      "id": "act-1791844364600-05lfd",
+      "timestamp": "2026-10-12T22:32:44.600Z"
+    },
+    {
+      "userId": "user-2",
+      "username": "SatoshiDuck",
+      "userHandle": "@satoshiduck",
+      "userAvatar": "/src/assets/images/duckcast_mascot_illustration_1790877735628.jpg",
+      "activityType": "user_login",
+      "details": "SatoshiDuck logged into session",
+      "id": "act-1791844364598-pk646",
+      "timestamp": "2026-10-12T22:32:44.598Z"
+    },
+    {
+      "userId": "user-6",
+      "username": "Alex Rivera",
+      "userHandle": "@alex_rivera",
+      "userAvatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
+      "activityType": "thesis_shared",
+      "details": "Shared thesis (YES) in \"Test Alpha Room 1791843913262\": \"Comprehensive probability thesis analysis for verification t...\"",
+      "roomId": "room-1791843913263",
+      "roomName": "Test Alpha Room 1791843913262",
+      "metadata": {
+        "stance": "YES",
+        "stakedAmount": 500,
+        "messageId": "msg-1791843913266-6zxx"
+      },
+      "id": "act-1791843913266-dytny",
+      "timestamp": "2026-10-12T22:25:13.266Z"
+    },
+    {
+      "userId": "user-5",
+      "username": "Sophia Chen",
+      "userHandle": "@sophia_chen",
+      "userAvatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200&q=80",
+      "activityType": "room_left",
+      "details": "Sophia Chen left \"Test Alpha Room 1791843913262\"",
+      "roomId": "room-1791843913263",
+      "roomName": "Test Alpha Room 1791843913262",
+      "id": "act-1791843913264-po9d6",
+      "timestamp": "2026-10-12T22:25:13.265Z"
+    },
+    {
+      "userId": "user-5",
+      "username": "Sophia Chen",
+      "userHandle": "@sophia_chen",
+      "userAvatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200&q=80",
+      "activityType": "room_joined",
+      "details": "Sophia Chen joined \"Test Alpha Room 1791843913262\"",
+      "roomId": "room-1791843913263",
+      "roomName": "Test Alpha Room 1791843913262",
+      "id": "act-1791843913264-xxcgf",
+      "timestamp": "2026-10-12T22:25:13.264Z"
+    },
+    {
+      "userId": "user-4",
+      "username": "Kaito Tanaka",
+      "userHandle": "@kaito_tanaka",
+      "userAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
+      "activityType": "room_created",
+      "details": "Created new prediction room \"Test Alpha Room 1791843913262\"",
+      "roomId": "room-1791843913263",
+      "roomName": "Test Alpha Room 1791843913262",
+      "metadata": {
+        "category": "AI & Tech"
+      },
+      "id": "act-1791843913263-j3x14",
+      "timestamp": "2026-10-12T22:25:13.263Z"
+    },
+    {
+      "userId": "user-2",
+      "username": "SatoshiDuck",
+      "userHandle": "@satoshiduck",
+      "userAvatar": "/src/assets/images/duckcast_mascot_illustration_1790877735628.jpg",
+      "activityType": "user_login",
+      "details": "SatoshiDuck logged into session",
+      "id": "act-1791843913258-sjvxx",
+      "timestamp": "2026-10-12T22:25:13.258Z"
+    },
+    {
+      "id": "act-seed-1",
+      "userId": "user-1",
+      "username": "Elena Rostova",
+      "userHandle": "@elena_crypto",
+      "userAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80",
+      "activityType": "room_created",
+      "details": "Created room \"Bitcoin $120K Strategy Room\"",
+      "roomId": "room-1",
+      "roomName": "Bitcoin $120K Strategy Room",
+      "timestamp": "2026-10-12T20:24:33.158Z"
+    },
+    {
+      "id": "act-seed-2",
+      "userId": "user-2",
+      "username": "SatoshiDuck",
+      "userHandle": "@satoshiduck",
+      "userAvatar": "/src/assets/images/duckcast_mascot_illustration_1790877735628.jpg",
+      "activityType": "room_joined",
+      "details": "Joined room \"Bitcoin $120K Strategy Room\"",
+      "roomId": "room-1",
+      "roomName": "Bitcoin $120K Strategy Room",
+      "timestamp": "2026-10-12T20:49:33.158Z"
+    },
+    {
+      "id": "act-seed-3",
+      "userId": "user-1",
+      "username": "Elena Rostova",
+      "userHandle": "@elena_crypto",
+      "userAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80",
+      "activityType": "thesis_shared",
+      "details": "Submitted YES thesis with 2,500 USDC stake in \"Bitcoin $120K Strategy Room\"",
+      "roomId": "room-1",
+      "roomName": "Bitcoin $120K Strategy Room",
+      "metadata": {
+        "stance": "YES",
+        "staked": 2500
+      },
+      "timestamp": "2026-10-12T21:44:33.158Z"
+    },
+    {
+      "id": "act-seed-4",
+      "userId": "user-2",
+      "username": "SatoshiDuck",
+      "userHandle": "@satoshiduck",
+      "userAvatar": "/src/assets/images/duckcast_mascot_illustration_1790877735628.jpg",
+      "activityType": "thesis_shared",
+      "details": "Submitted NO counter-thesis with 1,800 USDC stake in \"Bitcoin $120K Strategy Room\"",
+      "roomId": "room-1",
+      "roomName": "Bitcoin $120K Strategy Room",
+      "metadata": {
+        "stance": "NO",
+        "staked": 1800
+      },
+      "timestamp": "2026-10-12T21:59:33.158Z"
+    },
+    {
+      "id": "act-seed-5",
+      "userId": "user-3",
+      "username": "Marcus Vance",
+      "userHandle": "@marcus_vance",
+      "userAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80",
+      "activityType": "room_created",
+      "details": "Created room \"Champions League Half-time Analysis\"",
+      "roomId": "room-3",
+      "roomName": "Champions League Half-time Analysis",
+      "timestamp": "2026-10-12T21:14:33.158Z"
+    },
+    {
+      "id": "act-seed-6",
+      "userId": "user-6",
+      "username": "Alex Rivera",
+      "userHandle": "@alex_rivera",
+      "userAvatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
+      "activityType": "room_message",
+      "details": "Posted message in \"Bitcoin $120K Strategy Room\"",
+      "roomId": "room-1",
+      "roomName": "Bitcoin $120K Strategy Room",
+      "timestamp": "2026-10-12T22:19:33.158Z"
+    },
+    {
+      "id": "act-seed-7",
+      "userId": "user-4",
+      "username": "Kaito Tanaka",
+      "userHandle": "@kaito_tanaka",
+      "userAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
+      "activityType": "user_login",
+      "details": "Logged into Panta Rooms session",
+      "timestamp": "2026-10-12T22:13:33.158Z"
+    },
+    {
+      "id": "act-seed-8",
+      "userId": "user-1",
+      "username": "Elena Rostova",
+      "userHandle": "@elena_crypto",
+      "userAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80",
+      "activityType": "admin_action",
+      "details": "Verified resolution source feed for Panta primary market",
+      "metadata": {
+        "action": "verify_oracle"
+      },
+      "timestamp": "2026-10-12T22:09:33.158Z"
+    }
+  ]
+}

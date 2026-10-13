@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family: 'Geist', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11", "tnum";
+    letter-spacing: -0.012em;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #09090B;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+.font-display {
+  font-family: 'Geist', 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.026em;
+  font-weight: 700;
+}
+
+.font-sans-bold {
+  font-family: 'Geist', 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.font-handwriting {
+  font-family: 'Caveat', cursive, sans-serif;
+}
+
+.font-mono-tabular {
+  font-family: 'Geist Mono', 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.015em;
+}
+
+/* Squircle continuous superellipse border-radius utilities */
+.squircle {
+  border-radius: 14px;
+}
+.squircle-sm {
+  border-radius: 10px;
+}
+.squircle-md {
+  border-radius: 14px;
+}
+.squircle-lg {
+  border-radius: 18px;
+}
+.squircle-xl {
+  border-radius: 22px;
+}
+.squircle-tab {
+  border-radius: 13px;
+}
+
+.homepage-bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Prediction Tab & Card Interactive Hover Animations */
+.prediction-tab-card {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease;
+  will-change: transform, box-shadow;
+}
+
+.prediction-tab-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+  border-color: rgba(16, 185, 129, 0.45);
+}
+
+@keyframes halftone-breathe {
+  0%, 100% {
+    transform: scale(1.05) translate(2px, 1px);
+    opacity: 0.22;
+  }
+  50% {
+    transform: scale(1.09) translate(-2px, -2px);
+    opacity: 0.28;
+  }
+}
+
+.prediction-tab-card:hover .halftone-breathe-anim {
+  animation: halftone-breathe 3.5s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   Reusable Subtle RGB Glow Effect (.rgb-glow)
+   Framework-agnostic CSS class + CSS variables for cards, buttons, inputs, avatars, modals.
+   
+   Mechanics:
+   • Host element: position: relative and isolation: isolate.
+     Host retains its own solid dark background and its own border-radius.
+     Never clips with overflow: hidden so the halo can bleed out past edges.
+   • ::before: tight inner glow (inset: -2px, blur: 10px, opacity: 0.7)
+   • ::after: soft outer halo (inset: -6px, blur: 28px, opacity: 0.3)
+   • Conic gradient: conic-gradient(from var(--angle), #3b82f6, #4ade80, #fbbf24, #f43f5e, #3b82f6)
+   • Animation: @property --angle animated 0deg -> 360deg over 10s linear infinite
+   • Hover state: raises opacity slightly (0.7 -> 0.9)
+   • prefers-reduced-motion: animation disabled
+   • Light mode note: On light backgrounds, tone down opacity: set --glow-opacity: 0.35
+   ========================================================================== */
+
+@property --angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes rgb-glow-spin {
+  0% {
+    --angle: 0deg;
+  }
+  100% {
+    --angle: 360deg;
+  }
+}
+
+.rgb-glow {
+  /* Configurable CSS Variables with sensible defaults */
+  --glow-blur: 10px;
+  --glow-opacity: 0.7;
+  --glow-spread: -2px;
+  --glow-speed: 10s;
+  --glow-colors: #3b82f6, #4ade80, #fbbf24, #f43f5e, #3b82f6;
+
+  position: relative;
+  isolation: isolate;
+}
+
+/* Modifier: Extra Subtle Light Leak (opacity: 0.4, blur: 8px) */
+.rgb-glow-subtle {
+  --glow-opacity: 0.4;
+  --glow-blur: 8px;
+}
+
+/* Modifier: Light Mode Adaptation (lower opacity to 0.35) */
+.rgb-glow-light {
+  --glow-opacity: 0.35;
+  --glow-blur: 8px;
+}
+
+/* Both pseudo-elements sit behind host content and inherit border-radius */
+.rgb-glow::before,
+.rgb-glow::after {
+  content: '';
+  position: absolute;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: -1;
+  background: conic-gradient(
+    from var(--angle, 0deg),
+    var(--glow-colors, #3b82f6, #4ade80, #fbbf24, #f43f5e, #3b82f6)
+  );
+  animation: rgb-glow-spin var(--glow-speed, 10s) linear infinite;
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s ease;
+}
+
+/* ::before: Tight glow (inset: -2px, blur: 10px, opacity: 0.7) */
+.rgb-glow::before {
+  inset: var(--glow-spread, -2px);
+  filter: blur(var(--glow-blur, 10px));
+  opacity: var(--glow-opacity, 0.7);
+}
+
+/* ::after: Soft outer halo (inset: -6px, blur: 28px, opacity: 0.3) */
+.rgb-glow::after {
+  inset: calc(var(--glow-spread, -2px) * 3);
+  filter: blur(calc(var(--glow-blur, 10px) * 2.8));
+  opacity: calc(var(--glow-opacity, 0.7) * 0.43);
+}
+
+/* Hover state: raises opacity slightly (0.7 -> 0.9) */
+.rgb-glow:hover::before {
+  opacity: calc(var(--glow-opacity, 0.7) * 1.285);
+}
+
+.rgb-glow:hover::after {
+  opacity: calc(var(--glow-opacity, 0.7) * 0.65);
+}
+
+/* Static, non-animated version: rotation removed, fixed angle */
+.rgb-glow.rgb-glow-static::before,
+.rgb-glow.rgb-glow-static::after,
+.rgb-glow-static::before,
+.rgb-glow-static::after {
+  animation: none !important;
+  --angle: 135deg;
+}
+
+/* Accessibility: disable animation when user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .rgb-glow::before,
+  .rgb-glow::after {
+    animation: none !important;
+  }
+}
